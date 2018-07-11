@@ -15,9 +15,14 @@ In your `bsconfig.json`, include `"bs-shortid"` in the `bs-dependencies`.
 See `__tests__/ShortId_test.re` for sample usage.
 
 ```reason
-let myId = ShortId.generate(); // Generates a shortId.
-let myVal = ShortId.isValid("N1aGxE"); // True
-let myDict = ShortId.characters(); // String of chars
+/* Generate an ID */
+let myId = ShortId.generate(); 
+/* Check if ID is valid */
+let myVal = ShortId.isValid(yId); 
+/* Get characters of short Id */
+let myDict = ShortId.characters();
+/* Set characters of short Id */
+let myDict = ShortId.characters(~chars="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@", ())
 ```
 
 ## Development
