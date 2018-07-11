@@ -3,8 +3,13 @@
   "version": "0.3.1",
   "scripts": {
     "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
+    "major": "npm version major && npm publish",
+    "minor": "npm version minor && npm publish",
+    "patch": "npm version patch && npm publish",
+    "postpublish": "git push origin master --follow-tags",
+    "prepublishOnly": "npm run build",
+    "start": "bsb -make-world -w",
     "test": "jest"
   },
   "keywords": [
